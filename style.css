@@ -1,0 +1,163 @@
+@keyframes wave_hand {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(12deg);
+    }
+    75%{
+        transform: rotate(-12deg);
+    }
+}
+
+:root {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0px;
+    scroll-behavior: smooth;
+}
+
+.italique {
+    font-style: italic;
+}
+
+html {
+    background: black;
+}
+
+#canvas {
+    position:fixed;
+    z-index: -1;
+    top:0%;
+    left:0%;
+    width:100%;
+    height: 100%;
+}
+
+main {
+    color:white;
+}
+main a:visited, main a:link, main a {
+    color:lightskyblue !important;
+}
+
+header {
+    padding:1em;
+    margin:0px;
+    position: sticky;
+    top:0;
+    left:0;
+    background-color: lightsteelblue;
+    background: linear-gradient(90deg, rgba(119, 136, 153, 0.75) 20%, rgb(176, 196, 222, 0.75) 100%); 
+    z-index: 2;
+    backdrop-filter: blur(2px);
+}
+
+header menu {
+    margin-bottom: 0;
+    display:flex;
+    flex-direction: row;
+}
+
+
+header menu li {
+    margin: 0rem;
+    padding:1rem;
+    display: block;
+    list-style-type: none;
+    padding-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header > menu > li > a::after {
+    bottom: 0%;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0%;
+    position: relative;
+    background: #e62595;
+    transition: width 0.3s ease-in-out 0s;
+    width: 0%;
+} 
+  
+header > menu > li:hover > a::after {
+    width: auto;
+}
+
+
+header menu li a {
+    text-decoration: none;
+    color:blue;
+}
+
+#greeting_hand{
+    display:inline-block;
+    animation-name: wave_hand;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: linear;
+    transform-origin: bottom right;
+}
+.introduction{
+    margin-top: 0px;
+}
+section:focus {
+    border : 1px solid blue;
+    border-left: 1px solid silver;
+}
+
+section, article {
+    padding:1em;
+}
+section h1, article h1 {
+    margin : 2em;
+    border-radius: 10%;
+    font-weight: bold;
+}
+
+figure {
+    margin:0px;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border-radius: 10%;
+    width : 10em;
+    height: 2em;
+    border: 1px solid blue;
+}
+
+button:hover {
+    text-decoration: underline;
+    border: 0.2em solid lightblue;
+    border-radius: 20%;
+}
+
+footer {
+    color:white;
+    background: darkslateblue;
+    padding:1em;
+}
+footer  a {
+    color:lightgreen ;
+}
+
+#ButtonToTop {
+    border : 1px solid gray;
+    background: gray;
+    border-radius: 100%;
+    position:fixed;
+    bottom: 5%;
+    left: 95%;
+}
+#ButtonToTop {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}

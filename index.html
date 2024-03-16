@@ -2,37 +2,115 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>A placeholder website</title>
-		<meta name="author" content="Galactic-Kitchen">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Maxence's website</title>
+		<meta name="description"
+			content="Explore what this programmer is able to. Be aware that he knows the forsaked and ancient knowledge of how to exit vim."
+		>
+		<meta name="keywords"
+			content="Portfolio, Website, Site Web, WWW, Programming, Maxence Raymond, Maxence, Raymond, Galactic-Kitchen"
+		>
+		<meta name="author" content="Maxence Raymond">
 		<link rel="stylesheet" href="style.css">
-		<style>
-			body {
-				color:silver;
-				background-color: blue;
-				margin:5em;
-				text-align: center;
-			}
-			p {
-				padding:3em;
-			}
-			ul {
-				list-style-type: none;
-			}
-			a {
-				color:greenyellow;
-			}
-		</style>
+		<script src="script.js" defer></script>
+        <script type="importmap">
+            {
+              "imports": {
+                  "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+                  "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+              }
+            }
+          </script>
+          <script src="background.js" type="module"></script>
 	</head>
 	
 	<body>
-		<h1>This page is currently temporary.</h1>
-        <p>This website is acting as a placeholder for me while I configure things, finish building my own website and tidy things up.</p>
-        <p>Content coming soon enough</p>
-		<h2>In the meantime, here are some links about me :</h2>
-		<ul>
-			<li>Github : <a href="https://github.com/Galactic-Kitchen">Github@Galactic-Kitchen</a></li>
-			<li>Linkedin : <a href="https://www.linkedin.com/in/maxence-raymond">Linkedin@Maxence-Raymond</a></li>
-		</ul>
+        <canvas id="canvas"></canvas>
+		<header>
+			<menu>
+				<li><a href="#aboutme">A propos de moi</a></li>
+				<li><a href="#knowledge">Mes compétences</a></li>
+				<li><a href="#projects">Projets</a></li>
+				<li><a href="#contact">Me contacter</a></li>
+            </menu>
+		</header>
+		<div id="ButtonToTop">
+			<svg id="ButtonToTop_fleche" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="50" height="50">!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.<path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+			<p id="ButtonToTop_p"></p>
+		</div>
+		<main>
+			<section class="introduction">
+				<h1 title="Here's an easter egg">Bienvenue sur ce site web !<span id="greeting_hand">&#x1F44B;</span></h1>
+				<p>Bonjour ! je suis un jeune développeur français passioné d'informatique. <br>Principalement basé sur les applications, je fais aussi du web et des scripts.<br>Je suis actuellement à la recherche d'une alternance pour 2024.</p>
+			</section>
+
+			<article id="aboutme">
+				<h2>A propos de moi</h2>
+				<p>Actuellement en BUT Informatique, ma première initiation à la logique remonte à Minecraft avec la redstone. <br>
+					Depuis, et ayant au fil des années acquis de plus en plus de connaissances, je n'ai pas cessé d'élargir mes horizons.<br>
+					Aujourd'hui, je me forme afin d'obtenir les compétences me manquant pour arriver sur le milieu professionel.
+                </p>
+				<figure>
+					<figcaption>Lociels utilisés</figcaption>
+					<p>Vim, Neovim, VSCode, Notepad++, SublimeText</p>
+					<p>GIMP, Sketchup, LibreOffice/Word</p>
+					<p>Dual boot Arch Linux et Windows WSL 2.0</p>
+				</figure>
+			</article>
+
+			<section id="knowledge">
+				<h2>Compétences en langage de programmation :</h2>
+				<dl>
+					<dd id="Lua">Lua</dd>
+					<dt>Quelques compétences</dt>
+					<dd id="JS">Javascript</dd>
+					<dt>Maîtrise correcte</dt>
+					<dd id="C">C <em>Standard ANSI</em></dd>
+					<dt>Maîtrise acquise</dt>
+					<dd id="Bash">Bash</dd>
+					<dt>Création de script et commandes</dt>
+					<dd id="Java">Java</dd>
+					<dt>Maîtrise en cours de complétion</dt>
+					<dd id="Python">Python</dd>
+					<dt>Maîtrise des différents paradigmes de programmation offerts par le language</dt>
+					<dd id="Sql">Base de données</dd>
+					<dt>SQL89, SQL92, OracleDB, OracleSQLDevelopper</dt>
+					<dd id="Réseau">Réseau</dd>
+					<dt>Analyse de header Ip, Arp, DNS, Ipv4/6, DHCP</dt>
+				</dl>
+				<div>
+					<legend>Logiciels</legend>
+					<p>Wireshark, tcpdump, traceroute</p>
+					<p>GCC, GDB</p>
+					<p>MakeFile</p>
+					<p>Github, Git</p>
+				</div>
+			</section>
+
+			<section id="projects">
+				<h2>Quelques projets et travaux déjà réalisés</h2>
+				<ul>
+					<li title="Ne marche que en français dans le terminal"><a href="https://github.com/Galactic-Kitchen/Bataille-navale">Bataille navale en C89</a></li>
+					<li title="Site toujours en construction"><a href="#">Ce site <abbr title="World Wibe Web">WEB</abbr></a> <em class="italique">Je suis toujours en train de travailler dessus!</em></li>
+					<!--<li><a href="">Carnet d'adresses réalisé en Python</a> : projet réalisé en terminale</li>
+					<li><a href="">Système basique de gestion d'employé</a> : projet réalisé en terminale</li>-->
+				</ul>
+			</section>
+
+			<section id="contact">
+				<h2>Venez me contacter</h2>
+				<p>Vous pouvez me retrouver sur : </p>
+				<ul>
+					<li><a href="https://github.com/Galactic-Kitchen">Github@Galactic-Kitchen</a> My Github</li>
+					<li><a href="https://www.linkedin.com/in/maxence-raymond">Linkedin@Maxence-Raymond</a> My Linkedin</li>
+				</ul>
+			</section>
+		</main>
+		<footer>
+			<p>Code sous licence MPL</p>
+			<p>Site créé par Maxence Raymond.</p>
+			<p>Mentions légales : <a href="mentions_legales.html">lien</a></p>
+		</footer>
 
 	</body>
 </html>
